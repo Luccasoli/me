@@ -3,7 +3,7 @@ import Head from "next/head";
 const ImageContainer = () => {
   return (
     <img
-      className="w-96 h-96 bg-red-200 rounded-full object-cover"
+      className="w-48 h-48 bg-red-200 rounded-full object-cover md:w-80 md:h-80"
       src="/assets/images/me.jpg"
       alt="Lucas Mesquita"
     />
@@ -58,7 +58,7 @@ const Contacts = () => {
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center py-2 min-h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-center py-2 h-screen min-h-screen bg-gray-100">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
