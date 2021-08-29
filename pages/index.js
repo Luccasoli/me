@@ -2,13 +2,11 @@ import Head from "next/head";
 
 const ImageContainer = () => {
   return (
-    <div className="w-96 h-96 bg-red-200 rounded-full overflow-hidden">
-      <img
-        className="w-full bg-red-200"
-        src="/assets/images/me.jpg"
-        alt="Lucas Mesquita"
-      />
-    </div>
+    <img
+      className="w-96 h-96 bg-red-200 rounded-full object-cover"
+      src="/assets/images/me.jpg"
+      alt="Lucas Mesquita"
+    />
   );
 };
 
@@ -30,12 +28,28 @@ const SubTitle = () => {
   );
 };
 
+const Link = ({ children, href }) => (
+  <a
+    className="text-left underline"
+    href={href}
+    target="_blank"
+    rel="noreferrer"
+  >
+    {children}
+  </a>
+);
+
 const Contacts = () => {
   return (
     <div className="self-start">
-      <ul>
+      <ul className="list-disc">
         <li>
-          <a>Linkedin</a>
+          <Link href="https://www.linkedin.com/in/lucas-de-oliveira-mesquita/">
+            Linkedin
+          </Link>
+        </li>
+        <li>
+          <Link href="https://github.com/Luccasoli">GitHub</Link>
         </li>
       </ul>
     </div>
@@ -50,7 +64,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex flex-1 flex-col items-center justify-center px-20 w-1/2 text-center">
+      <main className="flex flex-1 flex-col items-center justify-center px-10 text-center xl:px-20 xl:w-1/2">
         <ImageContainer />
         <Title />
         <SubTitle />
